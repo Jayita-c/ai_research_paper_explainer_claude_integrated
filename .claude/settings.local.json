@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const p=require\\('./node_modules/ai/package.json'\\); console.log\\(JSON.stringify\\(p.exports?.['.'],null,2\\)\\)\")",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/@ai-sdk/provider-utils/package.json'\\).version\\)\")",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null http://localhost:3000)",
+      "Bash(break)",
+      "Bash(curl -s http://localhost:3000)",
+      "Read(//tmp/**)",
+      "Bash(cupsfilter /tmp/t.txt)",
+      "Bash(curl -s -N -X POST http://localhost:3000/api/analyze -F \"file=@/tmp/t.pdf;type=application/pdf\")",
+      "Bash(npx tsc *)",
+      "Bash(pkill -f \"next dev\")"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}
